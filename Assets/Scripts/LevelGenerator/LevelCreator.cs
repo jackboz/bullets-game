@@ -43,7 +43,8 @@ namespace MyGame
             _levelTxt = Resources.Load<TextAsset>("test");
 #endif
             string fs = _levelTxt.text;
-            string[] fLines = Regex.Split(fs, "\r\n");
+            fs.Replace("\r", "");
+            string[] fLines = Regex.Split(fs, "\n");
 
             float zSize = 2f;
             float xSize = 2f;
